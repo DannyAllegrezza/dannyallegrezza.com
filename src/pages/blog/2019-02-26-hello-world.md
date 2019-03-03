@@ -1,9 +1,15 @@
 ---
 templateKey: blog-post
-title: Hello world
-date: 2019-02-26T22:00:20.456Z
-description: a cool description
+title: Hello World
+date: 2016-02-26T22:00:00.000Z
+description: 'Welcome to my personal blog! '
 tags:
   - misc
 ---
-This is the content of my blog post
+My name is Danny, I'm a software engineer living in Cary, North Carolina with my wife and Kneesox, our Cornish Rex cat. 
+
+I'll be using this space to blog about cars, code, cats, and occasionally my personal life. 
+
+Enjoy!
+
+_\- Danny Allegrezza_
