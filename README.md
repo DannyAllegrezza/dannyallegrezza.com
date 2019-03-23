@@ -15,6 +15,14 @@ According to Gatsby, any component found in the `pages` directory will be automa
 
 ### Whats up with the `config.yml` file?
 
+### Gatsby useful links
+
+* [Gatsby pages](https://www.gatsbyjs.org/tutorial/part-one/#familiarizing-with-gatsby-pages)
+* [Gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/)
+* [Gatsby source plugins tutorial](https://www.gatsbyjs.org/tutorial/part-five/)
+
 ## Netlify CMS
+
+
 
 See the wiki for more info
