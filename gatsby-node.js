@@ -33,7 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
-
+      console.log(edge.node.fields.slug);
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -84,7 +84,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // The File name of the Markdown file is used as the Slug 
     // createFilePath() handles finding the parent File node along with creating the slug from the Markdown file..
     const slugValue = createFilePath({ node, getNode });
-    console.log(slugValue);
 
     createNodeField({
       name: `slug`,
