@@ -1,29 +1,34 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Content, { HTMLContent } from '../components/Content';
+// import Content, { HTMLContent } from '../components/Content';
 import { CarOverview } from '../components/CarOverview';
+import React, { Component } from 'react'
 
-// The main CarPage Component which is used to render the Cars page
-const CarPage = ({ data }) => {
-  console.log(data);
-  //const { markdownRemark: post } = data
-  const { edges: cars } = data.allMarkdownRemark;
+export default class CarPage extends Component {
+  render() {
+    const { data } = this.props;
+    const cars = data.allMarkdownRemark.edges;
 
-  return (
-    <Layout>
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+    return (
+      <Layout>
+        <section className="section">
+          <div className="container">
+            <div className="content">
+              <h1 className="has-text-weight-bold is-size-2">My Vehicles</h1>
+            </div>
+            {this.renderCars(cars)}
           </div>
-          {cars}
-        </div>
-      </section>
-    </Layout>
-  )
+        </section>
+      </Layout>
+    )
+  }
+
+  renderCars(cars) {
+    return cars.map(({ node: post }) => (
+      <CarOverview {...post} />
+    ))
+  }
 }
 
 CarPage.propTypes = {
@@ -31,8 +36,6 @@ CarPage.propTypes = {
     markdownRemark: PropTypes.object,
   }),
 }
-
-export default CarPage
 
 export const carPageQuery = graphql`
   query CarPageQuery {
