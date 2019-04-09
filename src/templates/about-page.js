@@ -33,7 +33,8 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
-
+  console.log(HTMLContent);
+  console.log(post.frontmatter.title);
   return (
     <Layout>
       <AboutPageTemplate
