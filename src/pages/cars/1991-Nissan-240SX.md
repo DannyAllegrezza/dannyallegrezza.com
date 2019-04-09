@@ -1,5 +1,5 @@
 ---
-templateKey: cars-page
+templateKey: car-post
 title: 1991 Nissan 240SX
 date: 2019-02-14T04:43:23.513Z
 description: 'My old car'
