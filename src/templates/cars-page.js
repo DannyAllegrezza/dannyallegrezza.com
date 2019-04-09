@@ -41,7 +41,7 @@ export const carPageQuery = graphql`
   query CarPageQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "cars-page" } }}
+      filter: { frontmatter: { templateKey: { eq: "car-post" } }}
     ) {
       edges {
         node {

@@ -1,5 +1,5 @@
 ---
-templateKey: cars-page
+templateKey: car-post
 title: 2006 Lotus Elise
 date: 2019-02-14T04:43:23.513Z
 description: 'My new car'
