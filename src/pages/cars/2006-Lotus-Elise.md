@@ -1,12 +1,8 @@
 ---
 templateKey: car-post
 title: 2006 Lotus Elise
+engine: 2ZZ
 date: 2019-02-14T04:43:23.513Z
-description: 'My new car'
-engine: '2ZZ'
+description: 'Simplify, then add lightness!'
 ---
-
-# ^ Everything up above here is frontmatter. This text is Markdown
-
-# This is all markdown
-I'd write more information about the car here!
+The driving experience offered by my 2006 Lotus Elise is likely the most fun I've had in an automobile.
