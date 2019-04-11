@@ -4,9 +4,15 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const CarPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
+  const PageContent = contentComponent || Content;
+  console.log(cars);
 
+  const CarsToDisplay = (cars) => {
+    <div>
+      Car
+    </div>
+  };
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -17,6 +23,7 @@ export const CarPageTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
+              <CarsToDisplay />
             </div>
           </div>
         </div>
@@ -32,15 +39,15 @@ CarPageTemplate.propTypes = {
 }
 
 const CarPage = ({ data }) => {
-  const { markdownRemark: post } = data
-  console.log(HTMLContent);
-  console.log(post.frontmatter.title);
+  const { markdownRemark: post } = data;
+
   return (
     <Layout>
       <CarPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        cars={data.allMarkdownRemark.edges}
       />
     </Layout>
   )
