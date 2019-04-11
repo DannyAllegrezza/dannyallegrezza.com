@@ -1,48 +1,61 @@
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-// import Content, { HTMLContent } from '../components/Content';
-import { CarOverview } from '../components/CarOverview';
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 
-export default class CarPage extends Component {
-  render() {
-    const { data } = this.props;
-    const cars = data.allMarkdownRemark.edges;
+export const CarPageTemplate = ({ title, content, contentComponent }) => {
+  const PageContent = contentComponent || Content
 
-    return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">My Vehicles</h1>
+  return (
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="section">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
+              <PageContent className="content" content={content} />
             </div>
-            {this.renderCars(cars)}
           </div>
-        </section>
-      </Layout>
-    )
-  }
+        </div>
+      </div>
+    </section>
+  )
+}
 
-  renderCars(cars) {
-    return cars.map(({ node: post }) => (
-      <CarOverview {...post} />
-    ))
-  }
+CarPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
+}
+
+const CarPage = ({ data }) => {
+  const { markdownRemark: post } = data
+  console.log(HTMLContent);
+  console.log(post.frontmatter.title);
+  return (
+    <Layout>
+      <CarPageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        content={post.html}
+      />
+    </Layout>
+  )
 }
 
 CarPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+  data: PropTypes.object.isRequired,
 }
 
+export default CarPage
+
+
 export const carPageQuery = graphql`
-  query CarPageQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "car-post" } }}
-    ) {
+  query CarPageQuery($id: String!) {
+    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -57,6 +70,12 @@ export const carPageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
           }
         }
+      }
+    }
+    markdownRemark(id: {eq: $id}) {
+      html
+      frontmatter {
+        title
       }
     }
   }
