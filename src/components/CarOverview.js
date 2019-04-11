@@ -12,10 +12,10 @@ export const CarOverview = (props) => {
             <div className="card-content">
                 <div className="media">
                 <div className="media-left">
-                    {props.carStatus}
+                    {props.frontmatter.engine}
                 </div>
                 <div className="media-content">
-                    <p className="title is-4">{props.title}</p>
+                    <p className="title is-4">{props.frontmatter.title}</p>
                     <p className="subtitle is-6">{props.description}</p>
                 </div>
                 </div>

@@ -55,7 +55,7 @@ CarPostTemplate.propTypes = {
 }
 
 const CarPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
