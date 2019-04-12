@@ -1,9 +1,8 @@
 ---
 templateKey: about-page
 title: "Who is this Danny guy? \U0001F914"
+image: /img/13100926_10205915597114461_7059694791063546571_n.jpg
 ---
-![danny allegrezza](/img/13100926_10205915597114461_7059694791063546571_n.jpg "danny allegrezza")
-
 I'm so glad you asked! I'm a professional software engineer, currently living and working in the [Research Triangle Parkway](https://en.wikipedia.org/wiki/Research_Triangle_Park). At the moment, I am employed at NoveList, a division of EBSCO Industries, working on software used by [millions of library patrons](https://www.ebscohost.com/novelist/our-products/novelist-select) world wide.
 
 ## Work Experience
