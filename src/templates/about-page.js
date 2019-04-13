@@ -32,15 +32,14 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
-  console.log(HTMLContent);
-  console.log(post.frontmatter.title);
+  const { markdownRemark: page } = data;
+  console.log(page.frontmatter.image);
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={page.frontmatter.title}
+        content={page.html}
       />
     </Layout>
   )
@@ -58,6 +57,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
