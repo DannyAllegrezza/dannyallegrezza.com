@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from "gatsby-image"
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const AboutPageTemplate = ({ title, content, contentComponent, image }) => {
+  const PageContent = contentComponent || Content;
+  console.log(image);
 
   return (
     <section className="section section--gradient">
@@ -16,6 +19,18 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
+              <div className="tile is-ancestor">
+                <div className="tile is-vertical">
+                  <div className="tile">
+                    <div className="tile is-parent is-vertical">
+                      <article className="tile is-child">
+                        <Img fixed={image.childImageSharp.fixed} />
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <PageContent className="content" content={content} />
             </div>
           </div>
@@ -31,15 +46,17 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, pageContext }) => {
   const { markdownRemark: page } = data;
-  console.log(page.frontmatter.image);
+  console.log(pageContext);
+  console.log(page.frontmatter);
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={page.frontmatter.title}
         content={page.html}
+        image={page.frontmatter.image}
       />
     </Layout>
   )
@@ -53,14 +70,14 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 400, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 300, height: 300) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
