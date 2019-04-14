@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from "gatsby-image"
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+// import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export const AboutPageTemplate = ({ title, content, contentComponent, image }) => {
   const PageContent = contentComponent || Content;
