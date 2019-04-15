@@ -1,9 +1,5 @@
 ---
 templateKey: cars-page
-title: My Garage 🏎
+title: The Garage
 ---
-
-
-I proudly consider myself an automobile enthusiast 👍. What started as a hobby quickly escalated into an obsession. Most who know me personally know that they can find me in my spare time working on a computer or a car. 
-
-This page contains a repository of my currently and previously owned vehicles. 
+This page contains a repository of my currently and previously owned vehicles. Have a question about any of the vehicles featured? Drop me a note and I'll do my best to reply promptly.
