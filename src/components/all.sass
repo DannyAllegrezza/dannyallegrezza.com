@@ -1,7 +1,14 @@
+@import "~bulma/sass/utilities/initial-variables"
+
 // Config vars
+// $fullhd: 1200px + (2 * $gap)
+$fullhd-enabled: false
+$widescreen-enabled: false
+
 // Kalidi logo brand color: #FD461E
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
+$dark: #231f20
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
@@ -42,12 +49,12 @@ $body-color: #333
 .margin-top-0
   margin-top: 0 !important
 
-  body
-    background-color: #fff
-    border-top: 6px solid #231f20
-    margin: 0
-    padding-top: 6px
-    overflow-x: hidden
+body
+  background-color: #fff
+  border-top: 6px solid #231f20
+  margin: 0
+  padding-top: 6px
+  overflow-x: hidden
 
 @import "~bulma"
 
