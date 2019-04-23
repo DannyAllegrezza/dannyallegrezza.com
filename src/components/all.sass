@@ -55,16 +55,34 @@ $footer-background-color: $dark
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
+// Custom Site CSS 
+// TODO: Refactor -> move these into separate CSS modules
 .icon svg
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
 
+.social
+  padding: 2em
+
+.social a
+    padding: .5em .5em .3em .5em
+    border-radius: 1em
+    background-color: $white-ter
+    margin: .5em
+    width: 1em
+    height: 1em
+    vertical-align: middle
+    display: inline
 
 body
   border-top: 6px solid #231f20
   margin: 0
   padding-top: 6px
+
+.post-overview
+  border-top: 1px solid #231f20
+  padding-top: 1em
 
 @import "~bulma"
 
