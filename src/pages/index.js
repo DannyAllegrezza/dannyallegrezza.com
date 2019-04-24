@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import dannyHeadshot from '../img/danny.jpg';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -14,10 +15,10 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column">
-                Column 1
+                <img src={dannyHeadshot} />
               </div>
               <div className="column">
-                Column 2
+                <h1>Hi! I'm Danny</h1>
               </div>
             </div>
           </div>
@@ -51,15 +52,15 @@ export default class IndexPage extends React.Component {
 
         <div className="post-overview">
           <Link className="has-text-primary" to={post.fields.slug}>
-            <p>{post.frontmatter.title}</p>
-            <p>
+            <p className="post-overview-title">{post.frontmatter.title}</p>
+            <p className="post-overview-excerpt">
               {post.excerpt}
             </p>
           </Link>
 
           {/* <span> &bull; </span>
               <small>{post.frontmatter.date}</small> */}
-              
+
         </div>
       </div>
     ))
@@ -83,7 +84,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 300)
           id
           fields {
             slug
