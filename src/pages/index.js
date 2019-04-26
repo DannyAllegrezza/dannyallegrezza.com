@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import dannyHeadshot from '../img/danny.jpg';
+import Button from '../components/Button';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -15,10 +16,22 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column">
-                <img src={dannyHeadshot} />
+                <img src={dannyHeadshot} alt={"danny and caitlin allegrezza"}/>
               </div>
               <div className="column">
-                <h1>Hi! I'm Danny</h1>
+                <div className="content">
+                  <h1>Hi! 👋 I'm Danny</h1>
+                  <p className="home-hero">
+                    <a href="https://github.com/DannyAllegrezza/">Software Developer</a>.
+                    <Link to={`/blog`}>Occassional blogger</Link>.
+                    <Link to={`/cars`}>Gearhead</Link>.
+                  </p>
+
+                  <p>
+                    I enjoy crafting simple solutions for complex problems. You too? Let's <Link to={`/contact`}>get in touch</Link>.
+                  </p>
+
+                </div>
               </div>
             </div>
           </div>
@@ -33,6 +46,15 @@ export default class IndexPage extends React.Component {
             <div className="columns">
               {this.renderBlogPosts(posts)}
             </div>
+
+            <div className="columns is-centered">
+              <div className="column is-8">
+                <Button>
+                  <Link to={`/blog`}>View All Posts</Link>
+                </Button>
+              </div>
+            </div>
+
           </div>
         </section>
       </Layout>

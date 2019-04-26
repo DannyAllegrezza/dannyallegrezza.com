@@ -16,6 +16,7 @@ $body-color: #333
 
 $family-sans-serif: 'Source Serif Pro', serif
 $footer-background-color: $dark
+$border-bottom-dotted: 1px dotted $dark
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -95,6 +96,14 @@ body
 .post-overview-title
   font: 400 18px/1.4 Georgia, serif
   margin: 1em 0
+
+.home-hero
+  font-size: $size-4
+  font-style: italic
+  line-height: 1.8rem
+  margin-bottom: 1rem
+  a
+    border-bottom: $border-bottom-dotted
 
 @import "~bulma"
 
