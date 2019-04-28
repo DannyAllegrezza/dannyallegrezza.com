@@ -16,15 +16,15 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column">
-                <img src={dannyHeadshot} alt={"danny and caitlin allegrezza"}/>
+                <img src={dannyHeadshot} alt={"danny and caitlin allegrezza"} />
               </div>
               <div className="column">
                 <div className="content">
                   <h1>Hi! 👋 I'm Danny</h1>
                   <p className="home-hero">
-                    <a href="https://github.com/DannyAllegrezza/">Software Developer</a>.
-                    <Link to={`/blog`}>Occassional blogger</Link>.
-                    <Link to={`/cars`}>Gearhead</Link>.
+                    <p><a href="https://github.com/DannyAllegrezza/">Software Developer</a>.</p>
+                    <p><Link to={`/blog`}>Occasional blogger</Link>.</p>
+                    <p><Link to={`/cars`}>Gearhead</Link>.</p>
                   </p>
 
                   <p>
@@ -71,7 +71,6 @@ export default class IndexPage extends React.Component {
   renderBlogPosts(posts) {
     return posts.map(({ node: post }) => (
       <div className="column is-4" key={post.id}>
-
         <div className="post-overview">
           <Link className="has-text-primary" to={post.fields.slug}>
             <p className="post-overview-title">{post.frontmatter.title}</p>
@@ -79,10 +78,6 @@ export default class IndexPage extends React.Component {
               {post.excerpt}
             </p>
           </Link>
-
-          {/* <span> &bull; </span>
-              <small>{post.frontmatter.date}</small> */}
-
         </div>
       </div>
     ))

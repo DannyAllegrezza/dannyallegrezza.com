@@ -14,7 +14,11 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
+  console.log(`content prop = ${content}`);
+  console.log(`contentComponent prop = ${contentComponent}`);
   const PostContent = contentComponent || Content
+
+  console.log(`PostContent = ${PostContent}`);
 
   return (
     <section className="section">

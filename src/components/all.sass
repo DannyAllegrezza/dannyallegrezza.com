@@ -5,7 +5,6 @@
 $fullhd-enabled: false
 $widescreen-enabled: false
 
-// Kalidi logo brand color: #FD461E
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 $dark: #231f20
@@ -17,6 +16,13 @@ $body-color: #333
 $family-sans-serif: 'Source Serif Pro', serif
 $footer-background-color: $dark
 $border-bottom-dotted: 1px dotted $dark
+
+@import "~bulma"
+
+
+.button
+  border-radius: 0
+  text-transform: uppercase
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -104,7 +110,4 @@ body
   margin-bottom: 1rem
   a
     border-bottom: $border-bottom-dotted
-
-@import "~bulma"
-
 
