@@ -15,7 +15,9 @@ export default class Blog extends React.Component {
                         <div className="content">
                             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
                         </div>
-                        {this.renderBlogPosts(posts)}
+                        <div className="columns is is-multiline">
+                          {this.renderBlogPosts(posts)}
+                        </div>
                     </div>
                 </section>
             </Layout>
