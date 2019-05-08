@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import dannyHeadshot from '../img/danny.jpg';
 import Button from '../components/Button';
-import BlogPost from '../components/BlogPost';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -22,11 +21,11 @@ export default class IndexPage extends React.Component {
               <div className="column">
                 <div className="content">
                   <h1>Hi! 👋 I'm Danny</h1>
-                  <div className="home-hero">
+                  <p className="home-hero">
                     <p><a href="https://github.com/DannyAllegrezza/">Software Developer</a>.</p>
                     <p><Link to={`/blog`}>Occasional blogger</Link>.</p>
                     <p><Link to={`/cars`}>Gearhead</Link>.</p>
-                  </div>
+                  </p>
 
                   <p>
                     I enjoy crafting simple solutions for complex problems. You too? Let's <Link to={`/contact`}>get in touch</Link>.
@@ -57,6 +56,7 @@ export default class IndexPage extends React.Component {
             </div>
 
           </div>
+
         </section>
       </Layout>
     )
@@ -71,7 +71,16 @@ export default class IndexPage extends React.Component {
    */
   renderBlogPosts(posts) {
     return posts.map(({ node: post }) => (
-      <BlogPost post={post} />
+      <div className="column is-4" key={post.id}>
+        <div className="post-overview">
+          <Link className="has-text-primary" to={post.fields.slug}>
+            <p className="post-overview-title">{post.frontmatter.title}</p>
+            <p className="post-overview-excerpt">
+              {post.excerpt}
+            </p>
+          </Link>
+        </div>
+      </div>
     ))
   }
 }
