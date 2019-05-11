@@ -34,19 +34,17 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   };
 
   return (
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-              <CarsToDisplay />
-            </div>
-          </div>
+        <div className="content">
+          <h1 className="has-text-weight-bold is-size-2">{title}</h1>
         </div>
+
+        <PageContent className="content" content={content} />
+
+        <hr />
+
+        <CarsToDisplay />
       </div>
     </section>
   )
@@ -82,28 +80,28 @@ export default CarPage
 
 export const carPageQuery = graphql`
   query CarPageQuery($id: String!) {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
+        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
+        edges {
+      node {
+        excerpt(pruneLength: 400)
+      id
           fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            engine
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
+        slug
       }
+      frontmatter {
+        title
+            templateKey
+      engine
+      date(formatString: "MMMM DD, YYYY")
     }
+  }
+}
+}
     markdownRemark(id: {eq: $id}) {
-      html
+        html
       frontmatter {
         title
       }
+      }
     }
-  }
 `

@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Img from "gatsby-image"
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-// import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export const AboutPageTemplate = ({ title, content, contentComponent, image }) => {
   const PageContent = contentComponent || Content;
-  console.log(image);
 
   return (
     <section className="section section--gradient">
@@ -24,7 +22,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image }) =
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child">
-                        <Img fixed={image.childImageSharp.fixed} />
+                        <PreviewCompatibleImage imageInfo={image} />
                       </article>
                     </div>
                   </div>
@@ -46,10 +44,10 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
+// gastby 
 const AboutPage = ({ data, pageContext }) => {
   const { markdownRemark: page } = data;
-  console.log(pageContext);
-  console.log(page.frontmatter);
+
   return (
     <Layout>
       <AboutPageTemplate
