@@ -20,12 +20,12 @@ export default class IndexPage extends React.Component {
               </div>
               <div className="column">
                 <div className="content">
-                  <h1>Hi! 👋 I'm Danny</h1>
-                  <p className="home-hero">
+                  <h1>Hi, I'm Danny! <span role="img" aria-label="wave">👋</span></h1>
+                  <div className="home-hero">
                     <p><a href="https://github.com/DannyAllegrezza/">Software Developer</a>.</p>
                     <p><Link to={`/blog`}>Occasional blogger</Link>.</p>
                     <p><Link to={`/cars`}>Gearhead</Link>.</p>
-                  </p>
+                  </div>
 
                   <p>
                     I enjoy crafting simple solutions for complex problems. You too? Let's <Link to={`/contact`}>get in touch</Link>.

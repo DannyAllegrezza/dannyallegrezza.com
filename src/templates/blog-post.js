@@ -6,6 +6,8 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+//
+// 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -16,7 +18,8 @@ export const BlogPostTemplate = ({
 }) => {
   console.log(`content prop = ${content}`);
   console.log(`contentComponent prop = ${contentComponent}`);
-  const PostContent = contentComponent || Content
+
+  const PostContent = contentComponent || Content;
 
   console.log(`PostContent = ${PostContent}`);
 
@@ -60,7 +63,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
+  debugger;
   return (
     <Layout>
       <BlogPostTemplate
