@@ -8,27 +8,16 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
 
   const CarsToDisplay = () => {
-    return cars.map(({ node: post }) => (
-      <div
-        className="content"
-        style={{ border: '1px solid #333', padding: '2em 4em' }}
-        key={post.id}
-      >
-        <p>
-          <Link className="has-text-primary" to={post.fields.slug}>
-            {post.frontmatter.title}
+    return cars.map(({ node: car }) => (
+      <div className="column is-4" key={car.id}>
+        <div className="post-overview">
+          <Link className="has-text-primary" to={car.fields.slug}>
+            <p className="post-overview-title">{car.frontmatter.title}</p>
+            <p className="post-overview-excerpt">
+              {car.excerpt}
+            </p>
           </Link>
-          <span> &bull; </span>
-          <small>{post.frontmatter.date}</small>
-        </p>
-        <p>
-          {post.excerpt}
-          <br />
-          <br />
-          <Link className="button is-small" to={post.fields.slug}>
-            Keep Reading →
-                    </Link>
-        </p>
+        </div>
       </div>
     ))
   };
@@ -40,7 +29,11 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
           <h1 className="has-text-weight-bold is-size-2">{title}</h1>
         </div>
         <PageContent className="content" content={content} />
-        <CarsToDisplay />
+        
+        <div className="columns">
+          <CarsToDisplay />
+        </div>
+
       </div>
     </section>
   )

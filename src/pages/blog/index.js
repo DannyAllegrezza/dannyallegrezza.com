@@ -17,6 +17,7 @@ export default class Blog extends React.Component {
         <div className="post-overview">
           <Link className="has-text-primary" to={post.fields.slug}>
             <p className="post-overview-title">{post.frontmatter.title}</p>
+            <p>{post.frontmatter.date}</p>
             <p className="post-overview-excerpt">
               {post.excerpt}
             </p>
@@ -34,7 +35,7 @@ export default class Blog extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+              <h1 className="has-text-weight-bold is-size-2">Latest Notes</h1>
             </div>
             <div className="columns is is-multiline">
               {this.renderBlogPosts(posts)}
