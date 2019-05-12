@@ -9,29 +9,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image }) =
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
-        <div className="columns">
-          <div className="column">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={image} />
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
+        <div className="content">
+          <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+          <PreviewCompatibleImage imageInfo={image} />
+          <PageContent className="content" content={content} />
         </div>
       </div>
     </section>

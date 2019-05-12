@@ -39,11 +39,7 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
         <div className="content">
           <h1 className="has-text-weight-bold is-size-2">{title}</h1>
         </div>
-
         <PageContent className="content" content={content} />
-
-        <hr />
-
         <CarsToDisplay />
       </div>
     </section>
