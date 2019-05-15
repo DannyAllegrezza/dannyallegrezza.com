@@ -35,7 +35,9 @@ export default class Blog extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Notes</h1>
+              <header className="masthead">
+                <h1 className="has-text-weight-bold is-size-2">Blog</h1>
+              </header>
             </div>
             <div className="columns is is-multiline">
               {this.renderBlogPosts(posts)}

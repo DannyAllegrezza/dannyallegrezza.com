@@ -17,7 +17,7 @@ $family-sans-serif: 'Source Serif Pro', serif
 $footer-background-color: $dark
 $border-bottom-dotted: 1px dotted $dark
 
-@import "~bulma"
+
 
 
 .button
@@ -111,3 +111,20 @@ body
   a
     border-bottom: $border-bottom-dotted
 
+.masthead 
+  display: flex
+  width: 100%
+  justify-content: center
+  align-items: center
+  text-align: center
+  text-transform: uppercase 
+  &:before,
+  &:after 
+      content: ''
+      border-top: 2px solid
+      margin: 0 20px 20px 0
+      flex: 1 0 20px
+  &:after
+    margin: 0 0 20px 20px
+
+@import "~bulma"
