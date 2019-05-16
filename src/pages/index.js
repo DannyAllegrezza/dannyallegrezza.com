@@ -28,7 +28,10 @@ export default class IndexPage extends React.Component {
                   </div>
 
                   <p>
-                    I enjoy crafting simple solutions for complex problems. You too? Let's <Link to={`/contact`}>get in touch</Link>.
+                    I enjoy crafting simple solutions for complex problems. You too?
+                  </p>
+                  <p>
+                    Let's <Link to={`/contact`}>get in touch</Link>.
                   </p>
 
                 </div>

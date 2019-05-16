@@ -12,6 +12,7 @@ const Footer = class extends React.Component {
                     <div className="columns">
                         <div className="column">
                             <div>Contact</div>
+                            <p>This site was generated with Gatsby.js</p>
                         </div>
 
                         <div className="column is-4 social">
