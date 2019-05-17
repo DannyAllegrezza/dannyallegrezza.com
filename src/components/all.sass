@@ -13,19 +13,24 @@ $primary: $dark
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 
-$family-sans-serif: 'Source Serif Pro', serif
+//$family-sans-serif: 'Source Serif Pro', serif
+$family-secondary: 'Source Serif Pro'
 $footer-background-color: $dark
-$border-bottom-dotted: 1px dotted $dark
+$border-dotted: dotted $dark
+$border-solid: solid $dark
+$border-transparent: solid transparent
 
+@import "~bulma"
 
-
+a.navbar-item
+  font-family: $family-secondary
+  border-bottom: 2px $border-transparent
+  &:hover
+    border-bottom: 2px $border-solid
 
 .button
   border-radius: 0
   text-transform: uppercase
-
-.navbar .navbar-menu
-  box-shadow:none !important
 
 .content .taglist
   list-style: none
@@ -91,10 +96,10 @@ body
   padding-top: 6px
 
 .post-overview
-  border-top: 1px solid $dark
+  border-top: 1px $border-solid
   padding-top: 1em
   &:hover
-    border-top: 2px solid $dark
+    border-top: 2px $border-solid
 
 .post-overview-excerpt
   font-style: italic
@@ -109,7 +114,9 @@ body
   line-height: 1.8rem
   margin-bottom: 1rem
   a
-    border-bottom: $border-bottom-dotted
+    border-bottom: 1px $border-dotted
+    &:hover
+      border-bottom: 1px $border-solid
 
 .masthead 
   display: flex
@@ -126,5 +133,3 @@ body
       flex: 1 0 20px
   &:after
     margin: 0 0 20px 20px
-
-@import "~bulma"
