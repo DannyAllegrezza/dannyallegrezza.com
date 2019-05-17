@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
+import Masthead from '../../components/Masthead';
 
 export default class Blog extends React.Component {
   /**
@@ -36,7 +37,7 @@ export default class Blog extends React.Component {
           <div className="container">
             <div className="content">
               <header className="masthead">
-                <h1 className="has-text-weight-bold is-size-2">Blog</h1>
+                <Masthead text={"Blog"} />
               </header>
             </div>
             <div className="columns is is-multiline">

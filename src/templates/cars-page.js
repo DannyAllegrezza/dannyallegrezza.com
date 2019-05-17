@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import Masthead from '../components/Masthead';
 
 export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
@@ -27,7 +28,7 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
       <div className="container">
         <div className="content">
           <header className="masthead">
-            <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+            <Masthead text={title} />
           </header>
         </div>
         <PageContent className="content" content={content} />

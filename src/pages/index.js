@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import dannyHeadshot from '../img/danny.jpg';
 import Button from '../components/Button';
+import Masthead from '../components/Masthead';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -43,7 +44,7 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Recent posts</h1>
+              <Masthead text={"Recent posts"} />
             </div>
 
             <div className="columns">

@@ -4,7 +4,6 @@
 // $fullhd: 1200px + (2 * $gap)
 $fullhd-enabled: false
 $widescreen-enabled: false
-
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 $dark: #231f20
@@ -119,16 +118,19 @@ body
       border-bottom: 1px $border-solid
 
 .masthead 
+  font-family: $family-secondary
   display: flex
   width: 100%
   justify-content: center
   align-items: center
   text-align: center
-  text-transform: uppercase 
+  text-transform: uppercase
+  letter-spacing: .2em
+  font-weight: 400
   &:before,
   &:after 
       content: ''
-      border-top: 2px solid
+      border-top: 1px solid
       margin: 0 20px 20px 0
       flex: 1 0 20px
   &:after
