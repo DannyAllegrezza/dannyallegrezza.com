@@ -3,6 +3,10 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
+// createPage() is going to do just that.. generate out pages from any of our discovered
+// markdownRemark nodes
+// - blog posts
+// - car posts
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -33,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
-      console.log(edge.node.fields.slug);
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,

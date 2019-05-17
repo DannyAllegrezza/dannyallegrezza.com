@@ -8,45 +8,34 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
 
   const CarsToDisplay = () => {
-    return cars.map(({ node: post }) => (
-      <div
-        className="content"
-        style={{ border: '1px solid #333', padding: '2em 4em' }}
-        key={post.id}
-      >
-        <p>
-          <Link className="has-text-primary" to={post.fields.slug}>
-            {post.frontmatter.title}
+    return cars.map(({ node: car }) => (
+      <div className="column is-4" key={car.id}>
+        <div className="post-overview">
+          <Link className="has-text-primary" to={car.fields.slug}>
+            <p className="post-overview-title">{car.frontmatter.title}</p>
+            <p className="post-overview-excerpt">
+              {car.excerpt}
+            </p>
           </Link>
-          <span> &bull; </span>
-          <small>{post.frontmatter.date}</small>
-        </p>
-        <p>
-          {post.excerpt}
-          <br />
-          <br />
-          <Link className="button is-small" to={post.fields.slug}>
-            Keep Reading →
-                    </Link>
-        </p>
+        </div>
       </div>
     ))
   };
 
   return (
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-              <CarsToDisplay />
-            </div>
-          </div>
+        <div className="content">
+          <header className="masthead">
+            <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+          </header>
         </div>
+        <PageContent className="content" content={content} />
+        
+        <div className="columns">
+          <CarsToDisplay />
+        </div>
+
       </div>
     </section>
   )
@@ -82,28 +71,28 @@ export default CarPage
 
 export const carPageQuery = graphql`
   query CarPageQuery($id: String!) {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
+        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
+        edges {
+      node {
+        excerpt(pruneLength: 400)
+      id
           fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            engine
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
+        slug
       }
+      frontmatter {
+        title
+            templateKey
+      engine
+      date(formatString: "MMMM DD, YYYY")
     }
+  }
+}
+}
     markdownRemark(id: {eq: $id}) {
-      html
+        html
       frontmatter {
         title
       }
+      }
     }
-  }
 `

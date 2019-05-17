@@ -1,14 +1,36 @@
+@import "~bulma/sass/utilities/initial-variables"
+
 // Config vars
-// Kalidi logo brand color: #FD461E
+// $fullhd: 1200px + (2 * $gap)
+$fullhd-enabled: false
+$widescreen-enabled: false
+
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
+$dark: #231f20
 
-$primary: $kaldi-red
+$primary: $dark
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 
-.navbar .navbar-menu
-  box-shadow:none !important
+//$family-sans-serif: 'Source Serif Pro', serif
+$family-secondary: 'Source Serif Pro'
+$footer-background-color: $dark
+$border-dotted: dotted $dark
+$border-solid: solid $dark
+$border-transparent: solid transparent
+
+@import "~bulma"
+
+a.navbar-item
+  font-family: $family-secondary
+  border-bottom: 2px $border-transparent
+  &:hover
+    border-bottom: 2px $border-solid
+
+.button
+  border-radius: 0
+  text-transform: uppercase
 
 .content .taglist
   list-style: none
@@ -42,13 +64,72 @@ $body-color: #333
 .margin-top-0
   margin-top: 0 !important
 
-  body
-    background-color: #fff
-    border-top: 6px solid #231f20
-    margin: 0
-    padding-top: 6px
-    overflow-x: hidden
+.navbar-item .icon
+  color: $primary
+// Override for use of svg's from https://simpleicons.org/
+// Custom Site CSS 
+// TODO: Refactor -> move these into separate CSS modules
+.icon svg
+  width: 1.5rem
+  height: 1.5rem
+  fill: currentColor
 
-@import "~bulma"
+footer
+  color: $white-ter
+  
+.social
+  padding: 2em
 
+.social a
+    padding: .5em .5em .3em .5em
+    border-radius: 1em
+    background-color: $white-ter
+    margin: .5em
+    width: 1em
+    height: 1em
+    vertical-align: middle
+    display: inline
 
+body
+  border-top: 6px solid $dark
+  margin: 0
+  padding-top: 6px
+
+.post-overview
+  border-top: 1px $border-solid
+  padding-top: 1em
+  &:hover
+    border-top: 2px $border-solid
+
+.post-overview-excerpt
+  font-style: italic
+
+.post-overview-title
+  font: 400 18px/1.4 Georgia, serif
+  margin: 1em 0
+
+.home-hero
+  font-size: $size-4
+  font-style: italic
+  line-height: 1.8rem
+  margin-bottom: 1rem
+  a
+    border-bottom: 1px $border-dotted
+    &:hover
+      border-bottom: 1px $border-solid
+
+.masthead 
+  display: flex
+  width: 100%
+  justify-content: center
+  align-items: center
+  text-align: center
+  text-transform: uppercase 
+  &:before,
+  &:after 
+      content: ''
+      border-top: 2px solid
+      margin: 0 20px 20px 0
+      flex: 1 0 20px
+  &:after
+    margin: 0 0 20px 20px
