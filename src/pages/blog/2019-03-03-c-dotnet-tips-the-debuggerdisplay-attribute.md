@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: 'C# && DotNet Tips - The DebuggerDisplay() attribute'
 date: 2017-10-09T16:14:00.000Z
+featuredImage: /img/debugger.jpg
 description: >-
   Debugging is one of the most crucial skills that a software developer can
   possess. I want to share a tip I recently learned while watching a great
