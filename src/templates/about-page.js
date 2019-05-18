@@ -17,7 +17,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image }) =
           <header className="masthead">
             <Masthead text={title} />
           </header>
-          
+
           <PreviewCompatibleImage imageInfo={image} />
           <PageContent className="content" content={content} />
         </div>
@@ -35,7 +35,7 @@ AboutPageTemplate.propTypes = {
 // gastby 
 const AboutPage = ({ data }) => {
   const { markdownRemark: page } = data;
-
+  console.log(page.frontmatter);
   return (
     <Layout>
       <AboutPageTemplate

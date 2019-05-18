@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import dannyHeadshot from '../img/danny.jpg';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import Masthead from '../components/Masthead';
 
 export default class IndexPage extends React.Component {
@@ -52,7 +52,7 @@ export default class IndexPage extends React.Component {
             </div>
 
             <div className="columns is-centered">
-              <div className="column is-8">
+              <div className="column is-3">
                 <Button>
                   <Link to={`/blog`}>View All Posts</Link>
                 </Button>

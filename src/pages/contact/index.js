@@ -43,6 +43,9 @@ export default class Index extends React.Component {
               <header className="masthead">
                 <Masthead text={"Contact"} />
               </header>
+              <p>
+                Interesting in chatting about software, cars, or technology? Drop me a message and I'll do my best to respond promptly.
+              </p>
               <form
                 name="contact"
                 method="post"
