@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   featuredImage
 }) => {
   const PostContent = contentComponent || Content;
-
+  console.log(featuredImage);
   return (
     <section className="section">
       {helmet || ''}
@@ -30,6 +30,7 @@ export const BlogPostTemplate = ({
             <BlogPostHeader title={title} date={date} tags={tags} />
 
             {featuredImage && <PreviewCompatibleImage imageInfo={featuredImage} />}
+
             <p>{description}</p>
 
 
@@ -109,7 +110,7 @@ export const pageQuery = graphql`
         tags
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 960, quality: 90) {
+            fluid(maxWidth: 960, maxHeight: 300, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
