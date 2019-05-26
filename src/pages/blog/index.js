@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import Masthead from '../../components/Masthead';
+import { FeaturedBlogPost } from '../../components/FeaturedBlogPost/FeaturedBlogPost';
 
 export default class Blog extends React.Component {
   /**
@@ -17,7 +18,7 @@ export default class Blog extends React.Component {
       <div className="column is-4" key={post.id}>
         <div className="post-overview">
           <Link className="has-text-primary" to={post.fields.slug}>
-            <p className="post-overview-title">{post.frontmatter.title}</p>
+            <p className="post-overview-title has-text-weight-bold">{post.frontmatter.title}</p>
             <p>{post.frontmatter.date}</p>
             <p className="post-overview-excerpt">
               {post.excerpt}
@@ -27,6 +28,7 @@ export default class Blog extends React.Component {
       </div>
     ))
   }
+
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark; // we're destructing data.allMarkdownRemark.edges and aliasing it as "posts"
@@ -39,6 +41,7 @@ export default class Blog extends React.Component {
               <header className="masthead">
                 <Masthead text={"Blog"} />
               </header>
+              <FeaturedBlogPost post={posts[0].node}/>
             </div>
             <div className="columns is is-multiline">
               {this.renderBlogPosts(posts)}
@@ -66,7 +69,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 250)
           id
           fields {
             slug
@@ -75,6 +78,13 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 960, maxHeight: 250, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

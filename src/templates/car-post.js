@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Content, { HTMLContent } from '../components/Content'
 
 export const CarPostTemplate = ({
@@ -10,7 +11,11 @@ export const CarPostTemplate = ({
   contentComponent,
   description,
   title,
+  engine,
+  horsepower,
+  torque,
   helmet,
+  featuredImage
 }) => {
   const PostContent = contentComponent || Content
 
@@ -23,7 +28,13 @@ export const CarPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            {featuredImage && <PreviewCompatibleImage imageInfo={featuredImage} />}
             <p>{description}</p>
+            <ul>
+              <li>{engine}</li>
+              <li>{horsepower}</li>
+              <li>{torque}</li>
+            </ul>
             <PostContent content={content} />
           </div>
         </div>
@@ -41,23 +52,27 @@ CarPostTemplate.propTypes = {
 }
 
 const CarPost = ({ data }) => {
-  const { markdownRemark: post } = data;
-  console.log("car-post.js");
+  const { markdownRemark: car } = data;
+
   return (
     <Layout>
       <CarPostTemplate
-        content={post.html}
+        content={car.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        title={car.frontmatter.title}
+        description={car.frontmatter.description}
+        engine={car.frontmatter.engine}
+        horsepower={car.frontmatter.horsepower}
+        torque={car.frontmatter.torque}
+        featuredImage={car.frontmatter.featuredImage}
         helmet={
           <Helmet
             titleTemplate="%s | Blog"
           >
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.description}`} />
+            <title>{`${car.frontmatter.title}`}</title>
+            <meta name="description" content={`${car.frontmatter.description}`} />
           </Helmet>
         }
-        title={post.frontmatter.title}
       />
     </Layout>
   )
@@ -81,6 +96,15 @@ export const pageQuery = graphql`
         title
         description
         engine
+        horsepower
+        torque
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 960, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
