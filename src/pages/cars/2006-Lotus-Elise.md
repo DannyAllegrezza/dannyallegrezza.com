@@ -8,7 +8,7 @@ featuredImage: /img/lotusElise.png
 horsepower: 190
 torque: 150
 ---
-Growing up, I was like many other little kids who had big dreams of owning a bright red Ferrari or Lamborghini. As I grew older, I realized what was required to own an Italian exotic. My _practical_ dream car has always been a Lotus. These British cars are exactl what I've always wanted in a sports car;
+Growing up, I was like many other little kids who had big dreams of owning a bright red Ferrari or Lamborghini. As I grew older, I realized what was required to own an Italian exotic. My _practical_ dream car has always been a Lotus. These British cars are exactly what I've always wanted in a sports car;
 
 * Lightweight
 * Rear-wheel Drive
@@ -30,5 +30,5 @@ Since owning the Lotus, I've received many different questions about the size of
 The vehicle itself is shorter and wider than a Mazda Miata. Inside is a different story. You've got two bucket seats which hold myself (5"9) and my wife (5"2) perfectly. 
 
 * If you're larger than a 36" waist you may find the seats slightly uncomfortable
-* The passenger seat is completly fixed - it doesn't move at all!
+* The passenger seat is completely fixed - it doesn't move at all!
 * Neither of the seats recline; both seats are fixed-back bucket seats
