@@ -7,7 +7,7 @@ import Masthead from '../components/Masthead';
 
 export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
-
+  console.log(cars);
   const CarsToDisplay = () => {
     return cars.map(({ node: car }) => (
       <div className="column is-4" key={car.id}>
@@ -15,7 +15,7 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
           <Link className="has-text-primary" to={car.fields.slug}>
             <p className="post-overview-title">{car.frontmatter.title}</p>
             <p className="post-overview-excerpt">
-              {car.excerpt}
+              {car.frontmatter.description}
             </p>
           </Link>
         </div>
@@ -71,29 +71,30 @@ export default CarPage
 
 
 export const carPageQuery = graphql`
-  query CarPageQuery($id: String!) {
-        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
-        edges {
+query CarPageQuery($id: String!) {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "car-post"}}}) {
+    edges {
       node {
         excerpt(pruneLength: 400)
-      id
-          fields {
-        slug
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          templateKey
+          engine
+          description
+          date(formatString: "MMMM DD, YYYY")
+        }
       }
-      frontmatter {
-        title
-            templateKey
-      engine
-      date(formatString: "MMMM DD, YYYY")
+    }
+  }
+  markdownRemark(id: {eq: $id}) {
+    html
+    frontmatter {
+      title
     }
   }
 }
-}
-    markdownRemark(id: {eq: $id}) {
-        html
-      frontmatter {
-        title
-      }
-      }
-    }
 `

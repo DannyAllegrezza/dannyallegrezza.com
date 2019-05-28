@@ -12,7 +12,7 @@ $primary: $dark
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 
-$family-sans-serif: 'Source Serif Pro', serif
+$family-sans-serif: 'Quicksand', serif
 $family-secondary: 'Source Serif Pro'
 $footer-background-color: $dark
 $border-dotted: dotted $dark
@@ -22,7 +22,6 @@ $border-transparent: solid transparent
 @import "~bulma"
 
 a.navbar-item
-  font-family: $family-primary
   border-bottom: 2px $border-transparent
   &:hover
     border-bottom: 2px $border-solid
@@ -93,6 +92,8 @@ body
   border-top: 6px solid $dark
   margin: 0
   padding-top: 6px
+  p 
+    font-size: 18px
 
 .post-overview
   border-top: 1px $border-solid
