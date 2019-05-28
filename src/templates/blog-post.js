@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   featuredImage
 }) => {
   const PostContent = contentComponent || Content;
-  console.log(featuredImage);
+
   return (
     <section className="section">
       {helmet || ''}

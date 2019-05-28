@@ -1,10 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import Content, { HTMLContent } from '../components/Content'
+import Content, { HTMLContent } from '../components/Content';
+import { BlogPostHeader } from '../components/BlogPostHeader/BlogPostHeader';
 
 export const CarPostTemplate = ({
   content,
@@ -17,7 +18,7 @@ export const CarPostTemplate = ({
   helmet,
   featuredImage
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
@@ -25,16 +26,19 @@ export const CarPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+            
+            <BlogPostHeader title={title}  />
+            
             {featuredImage && <PreviewCompatibleImage imageInfo={featuredImage} />}
+            
             <blockquote>{description}</blockquote>
-            <ul>
+            
+            {/* <ul>
               <li>{engine}</li>
               <li>{horsepower}</li>
               <li>{torque}</li>
-            </ul>
+            </ul> */}
+            
             <PostContent content={content} />
           </div>
         </div>

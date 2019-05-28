@@ -1,8 +1,6 @@
-import React from 'react'
+import React from 'react';
 //import { Link } from 'gatsby'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
+import github from '../img/social/github.svg';
 
 const Footer = class extends React.Component {
     render() {
@@ -12,29 +10,14 @@ const Footer = class extends React.Component {
                     <div className="columns">
                         <div className="column">
                             <div>Contact</div>
-                            <p>This site was generated with Gatsby.js</p>
+                            <p>This site was generated using <a href="https://www.gatsbyjs.org/">Gatsby.js</a></p>
                         </div>
 
                         <div className="column is-4 social">
-                            <a title="facebook" href="https://facebook.com">
+                            <a title="github" href="https://github.com/DannyAllegrezza">
                                 <img
-                                    src={facebook}
-                                    alt="Facebook"
-                                    style={{ width: '1em', height: '1em' }}
-                                />
-                            </a>
-                            <a title="twitter" href="https://twitter.com">
-                                <img
-                                    className="fas fa-lg"
-                                    src={twitter}
-                                    alt="Twitter"
-                                    style={{ width: '1em', height: '1em' }}
-                                />
-                            </a>
-                            <a title="instagram" href="https://instagram.com">
-                                <img
-                                    src={instagram}
-                                    alt="Instagram"
+                                    src={github}
+                                    alt="Github Profile for Danny Allegrezza"
                                     style={{ width: '1em', height: '1em' }}
                                 />
                             </a>

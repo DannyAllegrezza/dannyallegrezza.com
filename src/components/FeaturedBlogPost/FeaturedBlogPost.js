@@ -13,7 +13,7 @@ export const FeaturedBlogPost = ({post}) => {
           >
             <span className="featured-title">
               <h2 className="is-size-4">{post.frontmatter.title}</h2>
-              The software industry can't afford exclusion, mystery, or sloppiness.
+              {post.frontmatter.description}
               </span>
           </Link>
       </section>
