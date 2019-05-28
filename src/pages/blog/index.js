@@ -41,7 +41,7 @@ export default class Blog extends React.Component {
               <header className="masthead">
                 <Masthead text={"Blog"} />
               </header>
-              <FeaturedBlogPost post={posts[0].node}/>
+              <FeaturedBlogPost post={posts[0].node} />
             </div>
             <div className="columns is is-multiline">
               {this.renderBlogPosts(posts)}

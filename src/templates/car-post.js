@@ -29,7 +29,7 @@ export const CarPostTemplate = ({
               {title}
             </h1>
             {featuredImage && <PreviewCompatibleImage imageInfo={featuredImage} />}
-            <p>{description}</p>
+            <blockquote>{description}</blockquote>
             <ul>
               <li>{engine}</li>
               <li>{horsepower}</li>
