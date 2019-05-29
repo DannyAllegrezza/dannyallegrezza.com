@@ -29,7 +29,7 @@ const TemplateWrapper = ({ children }) => (
           <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
           <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
           <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet"></link>
-          <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"></link>
           <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
           <meta name="theme-color" content="#fff" />
 

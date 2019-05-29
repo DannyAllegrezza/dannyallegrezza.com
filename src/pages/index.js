@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import dannyHeadshot from '../img/danny.jpg';
 import Button from '../components/Button/Button';
 import Masthead from '../components/Masthead';
+import BlogPostOverview from '../components/BlogPostOverview/BlogPostOverview';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -76,14 +77,7 @@ export default class IndexPage extends React.Component {
   renderBlogPosts(posts) {
     return posts.map(({ node: post }) => (
       <div className="column is-4" key={post.id}>
-        <div className="post-overview">
-          <Link className="has-text-primary" to={post.fields.slug}>
-            <p className="post-overview-title">{post.frontmatter.title}</p>
-            <p className="post-overview-excerpt">
-              {post.excerpt}
-            </p>
-          </Link>
-        </div>
+        <BlogPostOverview post={post} />
       </div>
     ))
   }
@@ -106,7 +100,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 300)
+          excerpt(pruneLength: 150)
           id
           fields {
             slug

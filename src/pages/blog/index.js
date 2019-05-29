@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import Masthead from '../../components/Masthead';
 import { FeaturedBlogPost } from '../../components/FeaturedBlogPost/FeaturedBlogPost';
+import BlogPostOverview from '../../components/BlogPostOverview/BlogPostOverview';
 
 export default class Blog extends React.Component {
   /**
@@ -16,15 +17,7 @@ export default class Blog extends React.Component {
   renderBlogPosts(posts) {
     return posts.map(({ node: post }) => (
       <div className="column is-4" key={post.id}>
-        <div className="post-overview">
-          <Link className="has-text-primary" to={post.fields.slug}>
-            <p className="post-overview-title has-text-weight-bold">{post.frontmatter.title}</p>
-            <p>{post.frontmatter.date}</p>
-            <p className="post-overview-excerpt">
-              {post.excerpt}
-            </p>
-          </Link>
-        </div>
+        <BlogPostOverview post={post} />
       </div>
     ))
   }
@@ -69,7 +62,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 150)
           id
           fields {
             slug

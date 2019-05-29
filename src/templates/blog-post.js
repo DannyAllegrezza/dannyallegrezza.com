@@ -31,7 +31,7 @@ export const BlogPostTemplate = ({
 
             {featuredImage && <PreviewCompatibleImage imageInfo={featuredImage} />}
 
-            <p>{description}</p>
+            <blockquote>{description}</blockquote>
 
 
             <PostContent content={content} />

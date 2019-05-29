@@ -11,7 +11,7 @@ export const BlogPostHeader = ({ title, date, tags }) => {
                 {title}
             </h1>
 
-            <p className="has-text-centered has-text-weight-semibold">
+            <p className="has-text-centered is-size-8">
                 {date}
                 {tags && tags.length ? (
                     <span>
