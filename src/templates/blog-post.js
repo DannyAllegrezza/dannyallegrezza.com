@@ -1,10 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { kebabCase } from 'lodash';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import { BlogPostHeader } from '../components/BlogPostHeader/BlogPostHeader';
 
 export const BlogPostTemplate = ({
   content,
@@ -13,7 +15,8 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  date
+  date,
+  featuredImage
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -23,11 +26,13 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="has-text-centered has-text-weight-bold">
-              {title}
-            </h1>
-            <p className="has-text-centered has-text-weight-semibold">{date}</p>
-            <p>{description}</p>
+
+            <BlogPostHeader title={title} date={date} tags={tags} />
+
+            {featuredImage && <PreviewCompatibleImage imageInfo={featuredImage} />}
+
+            <blockquote>{description}</blockquote>
+
 
             <PostContent content={content} />
 
@@ -60,14 +65,16 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
-  debugger;
+  const { markdownRemark: post } = data;
+
   return (
     <Layout>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        date={post.frontmatter.date}
         description={post.frontmatter.description}
+        featuredImage={post.frontmatter.featuredImage}
         helmet={
           <Helmet
             titleTemplate="%s | Blog"
@@ -78,7 +85,6 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        date={post.frontmatter.date}
       />
     </Layout>
   )
@@ -102,6 +108,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 960, maxHeight: 300, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

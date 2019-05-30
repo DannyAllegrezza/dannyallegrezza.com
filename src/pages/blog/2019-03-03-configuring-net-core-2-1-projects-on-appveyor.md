@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Configuring .NET Core 2.1 projects on AppVeyor
 date: 2018-07-06T14:32:00.000Z
+featuredImage: /img/appveyorhomepage.jpg
 description: >-
   In my spare time I've been working on an open-source platform for automotive
   enthusiasts called GT86Registry. The goal of this project is to create a

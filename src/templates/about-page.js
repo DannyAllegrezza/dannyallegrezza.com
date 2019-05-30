@@ -4,8 +4,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import Masthead from '../components/Masthead';
 
 export const AboutPageTemplate = ({ title, content, contentComponent, image }) => {
+  console.log(contentComponent);
   const PageContent = contentComponent || Content;
 
   return (
@@ -13,8 +15,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image }) =
       <div className="container">
         <div className="content">
           <header className="masthead">
-            <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+            <Masthead text={title} />
           </header>
+
           <PreviewCompatibleImage imageInfo={image} />
           <PageContent className="content" content={content} />
         </div>
@@ -30,9 +33,9 @@ AboutPageTemplate.propTypes = {
 }
 
 // gastby 
-const AboutPage = ({ data, pageContext }) => {
+const AboutPage = ({ data }) => {
   const { markdownRemark: page } = data;
-
+  console.log(page.frontmatter);
   return (
     <Layout>
       <AboutPageTemplate

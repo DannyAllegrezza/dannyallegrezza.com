@@ -1,6 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby-link";
 import Layout from '../../components/Layout'
+import Masthead from "../../components/Masthead";
 
 function encode(data) {
   return Object.keys(data)
@@ -40,8 +41,11 @@ export default class Index extends React.Component {
           <div className="container">
             <div className="content">
               <header className="masthead">
-                <h1 className="has-text-weight-bold is-size-2">Contact</h1>
+                <Masthead text={"Contact"} />
               </header>
+              <p>
+                Interesting in chatting about software, cars, or technology? Drop me a message and I'll do my best to respond promptly.
+              </p>
               <form
                 name="contact"
                 method="post"

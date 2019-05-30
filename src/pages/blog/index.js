@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
+import Masthead from '../../components/Masthead';
+import { FeaturedBlogPost } from '../../components/FeaturedBlogPost/FeaturedBlogPost';
+import BlogPostOverview from '../../components/BlogPostOverview/BlogPostOverview';
 
 export default class Blog extends React.Component {
   /**
@@ -14,18 +17,11 @@ export default class Blog extends React.Component {
   renderBlogPosts(posts) {
     return posts.map(({ node: post }) => (
       <div className="column is-4" key={post.id}>
-        <div className="post-overview">
-          <Link className="has-text-primary" to={post.fields.slug}>
-            <p className="post-overview-title">{post.frontmatter.title}</p>
-            <p>{post.frontmatter.date}</p>
-            <p className="post-overview-excerpt">
-              {post.excerpt}
-            </p>
-          </Link>
-        </div>
+        <BlogPostOverview post={post} />
       </div>
     ))
   }
+
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark; // we're destructing data.allMarkdownRemark.edges and aliasing it as "posts"
@@ -36,8 +32,9 @@ export default class Blog extends React.Component {
           <div className="container">
             <div className="content">
               <header className="masthead">
-                <h1 className="has-text-weight-bold is-size-2">Blog</h1>
+                <Masthead text={"Blog"} />
               </header>
+              <FeaturedBlogPost post={posts[0].node} />
             </div>
             <div className="columns is is-multiline">
               {this.renderBlogPosts(posts)}
@@ -65,7 +62,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 150)
           id
           fields {
             slug
@@ -73,7 +70,15 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 960, maxHeight: 250, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
