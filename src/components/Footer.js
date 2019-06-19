@@ -1,6 +1,7 @@
 import React from 'react';
 //import { Link } from 'gatsby'
 import github from '../img/social/github.svg';
+import linkedin from '../img/social/linkedin.svg';
 
 const Footer = class extends React.Component {
     render() {
@@ -17,6 +18,13 @@ const Footer = class extends React.Component {
                             <a title="github" href="https://github.com/DannyAllegrezza">
                                 <img
                                     src={github}
+                                    alt="Github Profile for Danny Allegrezza"
+                                    style={{ width: '1em', height: '1em' }}
+                                />
+                            </a>
+                            <a title="LinkedIn Profile for Danny Allegrezza" href="https://www.linkedin.com/in/dannyallegrezza/">
+                                <img
+                                    src={linkedin}
                                     alt="Github Profile for Danny Allegrezza"
                                     style={{ width: '1em', height: '1em' }}
                                 />
