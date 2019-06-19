@@ -9,8 +9,7 @@ const Footer = class extends React.Component {
             <footer className="footer">
                 <div className="container">
                     <div className="columns">
-                        <div className="column">
-                            <div>Contact</div>
+                        <div className="column is-8">
                             <p>This site was generated using <a href="https://www.gatsbyjs.org/">Gatsby.js</a></p>
                         </div>
 
