@@ -7,7 +7,7 @@ import Masthead from '../components/Masthead';
 
 export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
-  console.log(cars);
+  
   const CarsToDisplay = () => {
     return cars.map(({ node: car }) => (
       <div className="column is-4" key={car.id}>

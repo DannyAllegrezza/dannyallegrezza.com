@@ -11,7 +11,6 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark; // we're destructing data.allMarkdownRemark.edges and aliasing it as "posts"
-    console.log(data);
     return (
       <Layout>
         <section className="section ">

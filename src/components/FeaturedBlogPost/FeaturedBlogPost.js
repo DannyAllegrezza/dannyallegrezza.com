@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import './featuredBlogPost.sass';
 
 export const FeaturedBlogPost = ({post}) => {
-    console.log(post);
     return (
         <section>
           <Link 

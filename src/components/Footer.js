@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Link } from 'gatsby'
 import github from '../img/social/github.svg';
 import linkedin from '../img/social/linkedin.svg';
 

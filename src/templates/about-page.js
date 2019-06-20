@@ -7,7 +7,6 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Masthead from '../components/Masthead';
 
 export const AboutPageTemplate = ({ title, content, contentComponent, image }) => {
-  console.log(contentComponent);
   const PageContent = contentComponent || Content;
 
   return (
@@ -35,7 +34,6 @@ AboutPageTemplate.propTypes = {
 // gastby 
 const AboutPage = ({ data }) => {
   const { markdownRemark: page } = data;
-  console.log(page.frontmatter);
   return (
     <Layout>
       <AboutPageTemplate

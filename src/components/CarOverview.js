@@ -1,7 +1,6 @@
 import React from 'react';
 
 export const CarOverview = (props) => {
-    console.log(props);
     return (
         <div className="card">
             <div className="card-image">
