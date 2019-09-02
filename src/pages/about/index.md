@@ -3,9 +3,13 @@ templateKey: about-page
 title: About
 image: /img/13100926_10205915597114461_7059694791063546571_n.jpg
 ---
-I'm a professional software engineer, currently living and employed in the [Research Triangle Parkway](https://en.wikipedia.org/wiki/Research_Triangle_Park). At the moment, I am helping create software used by [millions of library patrons](https://www.ebscohost.com/novelist/our-products/novelist-select) across the globe. I take pride in being a self-starter, a critical thinker, and someone who is easily approachable. I enjoy the core fundamentals of Extreme Programming and try to study the works of the incredibly smart folks who created the Agile Manifesto (www.agilemanifesto.org). Outside of the software world I am a huge car enthusiast. When I'm not working on software, I enjoy modifying on [cars](/cars), writing about [technology](/notes), and spending time with my wife and Kneesox, our Cornish Rex cat.
+I'm a professional software engineer, currently living and employed in the [Research Triangle Parkway](https://en.wikipedia.org/wiki/Research_Triangle_Park). At the moment, I am helping create software used by [millions of library patrons](https://www.ebscohost.com/novelist/our-products/novelist-select) across the globe. I take pride in being a self-starter, a critical thinker, and someone who is easily approachable. I'm a fan of [agile software development](www.agilemanifesto.org), extreme programming, and finding the right tool to solve the problem at hand. 
 
-Interesting in talking about technology, automobiles or professional development? Let's get in touch!
+Outside of the software world I am a huge car enthusiast. When I'm not working on software, I enjoy modifying on [cars](/cars), writing about [technology](/notes), and spending time with my wife and Kneesox, our Cornish Rex cat.
+
+Interesting in talking about technology, automobiles or professional development? 
+
+[Let's get in touch!](https://www.dannyallegrezza.com/contact/)
 
 # Work Experience
 
@@ -14,6 +18,7 @@ My [LinkedIn](https://www.linkedin.com/in/dannyallegrezza/) profile gives a grea
 I've worked with additional languages including Java, PHP and some Go. Ultimately, I prefer whatever language is best fit to solve the problem at hand.
 
 ### Novelist, Software Engineer II, Durham, NC Nov 2017 - Present
+
 At NoveList, I work alongside a skilled team of developers who are responsible for creating, maintaining, and extending suite of software used daily by millions of library patrons across the globe. 
 
 * Maintain existing legacy products by fixing bugs, tuning performance and re-writing core modules
@@ -24,6 +29,7 @@ At NoveList, I work alongside a skilled team of developers who are responsible f
 * Mentor junior developers
 
 ### aWhere, Software Engineer, Durham, NC May 2016 - Sep 2017
+
 Worked on a small, agile engineering team focused on maintaining and extending the back-end micro-services of the core API platform, which utilize C# (.NET
 4.6 and Core), Java, Docker, SQL Server and PostgreSQL. The small team size led to a wide variety of responsibilities being delegated to each engineer.
 
@@ -34,6 +40,7 @@ Worked on a small, agile engineering team focused on maintaining and extending t
 * Extended the automated build and deployment pipeline using BitBucket, Team City and Octopus Deploy.
 
 ### B2R Finance, Software Engineer (Cloud Applications), Charlotte, NC Aug 2015 - Apr 2016
+
 As a software engineer at B2R Finance, I developed custom B2C applications which integrated with the Salesforce.com platform in addition to building new
 functionality into existing web application.
 
@@ -42,6 +49,7 @@ functionality into existing web application.
 * Convinced company to implement version control (git on BitBucket) to their software development pipeline.
 
 ### Sirius Computer Solutions, Software Developer, Greensboro, NC May 2014 - Aug 2015
+
 I developed internal tooling to help optimize business processes by extending an existing C# WinForms application. In addition to general software
 development, I also worked directly with clients, serving as a subject matter expert.
 
@@ -50,6 +58,7 @@ development, I also worked directly with clients, serving as a subject matter ex
 * Overhauled front-end of internal web portal using modern web technologies.
 
 ### Pixels, Web Developer, Greensboro, NC May 2013 - May 2014
+
 I served primarily as a web developer for this boutique media shop. I worked directly with clients to help create custom, dynamic websites as well as managed
 their web hosting and email accounts.
 
