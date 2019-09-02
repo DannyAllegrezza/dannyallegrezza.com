@@ -3,7 +3,7 @@ templateKey: about-page
 title: About
 image: /img/13100926_10205915597114461_7059694791063546571_n.jpg
 ---
-I'm a professional software engineer, currently living and employed in the [Research Triangle Parkway](https://en.wikipedia.org/wiki/Research_Triangle_Park). At the moment, I am helping create software used by [millions of library patrons](https://www.ebscohost.com/novelist/our-products/novelist-select) across the globe. I take pride in being a self-starter, a critical thinker, and someone who is easily approachable. I'm a fan of [agile software development](www.agilemanifesto.org), extreme programming, and finding the right tool to solve the problem at hand. 
+I'm a professional software engineer, currently living and employed in the [Research Triangle Parkway](https://en.wikipedia.org/wiki/Research_Triangle_Park). At the moment, I am helping create software used by [millions of library patrons](https://www.ebscohost.com/novelist/our-products/novelist-select) across the globe. I take pride in being a self-starter, a critical thinker, and someone who is easily approachable. I'm a fan of [agile software development](http://www.agilemanifesto.org), extreme programming, and finding the right tool to solve the problem at hand. 
 
 Outside of the software world I am a huge car enthusiast. When I'm not working on software, I enjoy modifying on [cars](/cars), writing about [technology](/notes), and spending time with my wife and Kneesox, our Cornish Rex cat.
 
