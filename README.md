@@ -1,22 +1,8 @@
 # dannyallegrezza.com
 
-The third iteration of my personal website.
-
 This project serves as an experiment with Gatsby, Netlify-CMS and the JAM stack. I'm hoping these notes will help anyone else toying around with this stack!
 
-* If anyone is curious, this repo showcases the [end result of Gatsby tutorial](https://github.com/DannyAllegrezza/gatsby-by-doing). This will quickly become stale as Gatsby is experiencing rapid growth.
-
-
-## Installation
-This project uses `npm` for package dependency, make sure you have it installed first.
-
-1. Clone/fork this repository
-2. Run `npm install` 
-3. Run `npm run develop` to start up the project locally
-
-* To make sure packages stay up to date, periodically run `npm-check u` to identify safe, backwards-compatible updates.
-
-## General Gatsby/Netlify notes
+* [End result of Gatsby tutorial](https://github.com/DannyAllegrezza/gatsby-by-doing)
 
 ### How does data get loaded by Gatsby?
 * Files are `sourced` by `gatsby-source-*` plugins. Once the data has been sourced, you use a "transformer" plugin to transform your source data into other types of data.
@@ -48,5 +34,7 @@ There are a few different ways to create Pages in Gatsby.
 * [Gatsby source plugins tutorial](https://www.gatsbyjs.org/tutorial/part-five/)
 
 ## Netlify CMS
+
+
 
 See the wiki for more info
