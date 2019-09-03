@@ -33,11 +33,11 @@ export const CarPostTemplate = ({
             
             <blockquote>{description}</blockquote>
             
-            {/* <ul>
+            <ul>
               <li>{engine}</li>
               <li>{horsepower}</li>
               <li>{torque}</li>
-            </ul> */}
+            </ul> 
             
             <PostContent content={content} />
           </div>
