@@ -5,9 +5,9 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import Masthead from '../components/Masthead';
 
-export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
+export const CarPageTemplate = ({ title, content, contentComponent, cars, featuredImage }) => {
   const PageContent = contentComponent || Content;
-  
+  console.log(featuredImage);
   const CarsToDisplay = () => {
     return cars.map(({ node: car }) => (
       <div className="column is-4" key={car.id}>
@@ -49,15 +49,16 @@ CarPageTemplate.propTypes = {
 }
 
 const CarPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: car } = data;
 
   return (
     <Layout>
       <CarPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={car.frontmatter.title}
+        content={car.html}
         cars={data.allMarkdownRemark.edges}
+        featuredImage={car.frontmatter.featuredImage}
       />
     </Layout>
   )
@@ -86,6 +87,13 @@ query CarPageQuery($id: String!) {
           engine
           description
           date(formatString: "MMMM DD, YYYY")
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 300, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

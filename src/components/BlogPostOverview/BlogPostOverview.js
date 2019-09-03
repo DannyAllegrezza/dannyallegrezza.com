@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import './blogPostOverview.sass';
 
+
 export default class BlogPostOverview extends Component {
     static propTypes = {
         post: PropTypes.object
