@@ -3,16 +3,19 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Masthead from '../components/Masthead';
 
-export const CarPageTemplate = ({ title, content, contentComponent, cars, featuredImage }) => {
+export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
-  console.log(featuredImage);
+  console.log(cars);
+
   const CarsToDisplay = () => {
     return cars.map(({ node: car }) => (
       <div className="column is-4" key={car.id}>
         <div className="post-overview">
           <Link className="has-text-primary" to={car.fields.slug}>
+            <PreviewCompatibleImage imageInfo={car.frontmatter.featuredImage} />
             <p className="post-overview-title">{car.frontmatter.title}</p>
             <p className="post-overview-excerpt">
               {car.frontmatter.description}
@@ -32,7 +35,7 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars, featur
           </header>
         </div>
         <PageContent className="content" content={content} />
-        
+
         <div className="columns">
           <CarsToDisplay />
         </div>
@@ -49,16 +52,17 @@ CarPageTemplate.propTypes = {
 }
 
 const CarPage = ({ data }) => {
-  const { markdownRemark: car } = data;
+  const { markdownRemark: page } = data;
+  console.log(data);
 
   return (
     <Layout>
       <CarPageTemplate
         contentComponent={HTMLContent}
-        title={car.frontmatter.title}
-        content={car.html}
+        title={page.frontmatter.title}
+        content={page.html}
         cars={data.allMarkdownRemark.edges}
-        featuredImage={car.frontmatter.featuredImage}
+        featuredImage={data.allMarkdownRemark.node}
       />
     </Layout>
   )

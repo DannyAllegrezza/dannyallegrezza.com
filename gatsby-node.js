@@ -45,6 +45,8 @@ exports.createPages = ({ actions, graphql }) => {
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
+        // passing in the "id" property allows for the GraphQL query to find the associated
+        // id of the page. See the "cars-page" or "about" page to see how this works
         context: {
           id,
         },
