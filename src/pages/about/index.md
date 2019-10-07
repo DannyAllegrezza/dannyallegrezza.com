@@ -3,6 +3,9 @@ templateKey: about-page
 title: About
 image: /img/13100926_10205915597114461_7059694791063546571_n.jpg
 ---
+
+# Short bio
+
 I'm a professional software engineer, currently living and employed in the [Research Triangle Parkway](https://en.wikipedia.org/wiki/Research_Triangle_Park). At the moment, I am helping create software used by [millions of library patrons](https://www.ebscohost.com/novelist/our-products/novelist-select) across the globe. I take pride in being a self-starter, a critical thinker, and someone who is easily approachable. I'm a fan of [agile software development](http://www.agilemanifesto.org), extreme programming, and finding the right tool to solve the problem at hand. 
 
 Outside of the software world I am a huge car enthusiast. When I'm not working on software, I enjoy modifying on [cars](/cars), writing about [technology](/notes), and spending time with my wife and Kneesox, our Cornish Rex cat.
@@ -10,6 +13,10 @@ Outside of the software world I am a huge car enthusiast. When I'm not working o
 Interesting in talking about technology, automobiles or professional development? 
 
 [Let's get in touch!](https://www.dannyallegrezza.com/contact/)
+
+# Long bio
+
+To my friends and family, it's no surprise that I have found a career in software engineering. Some of my earliest memories of working with a computer include being 8 years old and installing Windows 3.1 onto the family PC via an absurd amount of 3.5" floppy disk drives! I was instantly hooked and wanted to know more about how this mysterious box worked. This led me down the path of understanding how computer hardware operated.
 
 # Work Experience
 
@@ -19,7 +26,7 @@ I've worked with additional languages including Java, PHP and some Go. Ultimatel
 
 ### Novelist, Software Engineer II, Durham, NC Nov 2017 - Present
 
-At NoveList, I work alongside a skilled team of developers who are responsible for creating, maintaining, and extending suite of software used daily by millions of library patrons across the globe. 
+At NoveList, I work alongside a skilled team of developers who are responsible for creating, maintaining, and extending suite of software used daily by millions of library patrons across the globe. My responsibilities as a full-stack engineer require me to demonstrate the ability to architect, implement, deploy and maintain systems using a variety of tools. 
 
 * Maintain existing legacy products by fixing bugs, tuning performance and re-writing core modules
 * Helped champion adoption of .NET Core throughout the technology division 
@@ -59,7 +66,7 @@ development, I also worked directly with clients, serving as a subject matter ex
 
 ### Pixels, Web Developer, Greensboro, NC May 2013 - May 2014
 
-I served primarily as a web developer for this boutique media shop. I worked directly with clients to help create custom, dynamic websites as well as managed
+I served primarily as a web developer for this boutique media shop, working directly with clients to help create custom, dynamic websites as well as managed
 their web hosting and email accounts.
 
 * Developed custom websites using Drupal and WordPress for clients, implementing PSD mockups.
