@@ -1,5 +1,7 @@
 # dannyallegrezza.com
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f0ffb9b9-549e-46f4-b880-83ccf5470a72/deploy-status)](https://app.netlify.com/sites/cocky-jones-987d7f/deploys)
+
 The third iteration of my personal website.
 
 This project serves as an experiment with Gatsby, Netlify-CMS and the JAM stack. I'm hoping these notes will help anyone else toying around with this stack!
