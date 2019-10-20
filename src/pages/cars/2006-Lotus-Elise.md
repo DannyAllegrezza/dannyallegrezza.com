@@ -8,7 +8,7 @@ featuredImage: /img/lotusElise.png
 horsepower: 190
 torque: 150
 ---
-Growing up, I was like many other little kids who had big dreams of owning a bright red Ferrari or Lamborghini. As I grew older, I realized what was required to own an Italian exotic. My _practical_ dream car has always been a Lotus. These British cars are exactly what I've always wanted in a sports car;
+Growing up, I was no different from most little kids whose bedroom wall was filled with posters of exotic Italian sports cars. As I grew older and become more knowledgeable on all of the costs of owning a car I quickly realized that the sticker shock is just the beginning of owning an exotic. My _practical_ dream car has always been a Lotus Elise or Exige. In my opinion, these cars check off everyone of the requirements for a proper sports car. 
 
 * Lightweight
 * Rear-wheel Drive
@@ -17,18 +17,17 @@ Growing up, I was like many other little kids who had big dreams of owning a bri
 
 After a year long search, I found this beautiful 2006 Chili Red Lotus Elise offered for sale by Chequered Flag, a dealership located in Marina Del-Ray, California, who specializes in exotics and classic cars.
 
-## The purchasing experience
-
-The driving experience offered is likely the most fun you can have in any automobile! 
-
+In addition to shipping a vehicle, this was the first time I've ever purchased an out of state car. Naturally, my car was located at nearly the furthest distance away from the east coast - beautiful Marina Del-Ray, California. 
 
 ## FAQ
-Since owning the Lotus, I've received many different questions about the size of the car, driving experience, etc. 
-
+Since owning the Lotus, I've received many different questions about the size of the car, driving experience, maintenance costs, etc. 
 
 #### Just how small is the Lotus?
-The vehicle itself is shorter and wider than a Mazda Miata. Inside is a different story. You've got two bucket seats which hold myself (5"9) and my wife (5"2) perfectly. 
+Very small. The vehicle itself is shorter and wider than a Mazda Miata. Inside is a different story. You've got two bucket seats, which hold myself (5"9) and my wife (5"2) perfectly, and _thats it_. 
 
 * If you're larger than a 36" waist you may find the seats slightly uncomfortable
-* The passenger seat is completely fixed - it doesn't move at all!
 * Neither of the seats recline; both seats are fixed-back bucket seats
+* The passenger seat is completely fixed - it doesn't move at all!
+
+#### What type of maintenance is required?
+My experience so far has been nothing above ordinary for a car of this type. The Toyota engine is very easy to perform standard operations on, such as a oil changes and spark plugs.
