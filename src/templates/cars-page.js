@@ -36,7 +36,7 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
         </div>
         <PageContent className="content" content={content} />
 
-        <div className="columns">
+        <div className="columns is-multiline">
           <CarsToDisplay />
         </div>
 
