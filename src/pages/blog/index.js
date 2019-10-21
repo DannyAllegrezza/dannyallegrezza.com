@@ -36,7 +36,7 @@ export default class Blog extends React.Component {
               </header>
               <FeaturedBlogPost post={posts[0].node} />
             </div>
-            <div className="columns is is-multiline">
+            <div className="columns is-multiline">
               {this.renderBlogPosts(posts)}
             </div>
           </div>
