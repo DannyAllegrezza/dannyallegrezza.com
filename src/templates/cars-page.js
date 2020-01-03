@@ -93,7 +93,7 @@ query CarPageQuery($id: String!) {
           date(formatString: "MMMM DD, YYYY")
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 300, quality: 90) {
+              fluid(maxWidth: 300, maxHeight: 300, quality: 90) {
                 ...GatsbyImageSharpFluid
               }
             }
