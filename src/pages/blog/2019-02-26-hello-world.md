@@ -1,7 +1,8 @@
 ---
 templateKey: blog-post
 title: Hello World
-date: 2016-02-26T22:00:00.000Z
+date: 2015-02-26T22:00:00.000Z
+featuredImage: /img/products-full-width.jpg
 description: 'Welcome to my personal blog! '
 tags:
   - misc
