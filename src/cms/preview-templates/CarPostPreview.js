@@ -5,9 +5,13 @@ import { CarPostTemplate } from '../../templates/car-post'
 const CarPostPreview = ({ entry, widgetFor }) => (
     <CarPostTemplate
         content={widgetFor('body')}
+        featuredImage={entry.getIn(['data', 'featuredImage'])}
         description={entry.getIn(['data', 'description'])}
-        tags={entry.getIn(['data', 'tags'])}
         title={entry.getIn(['data', 'title'])}
+        engine={entry.getIn(['data', 'engine'])}
+        horsepower={entry.getIn(['data', 'horsepower'])}
+        torque={entry.getIn(['data', 'torque'])}
+        tags={entry.getIn(['data', 'tags'])}
     />
 )
 

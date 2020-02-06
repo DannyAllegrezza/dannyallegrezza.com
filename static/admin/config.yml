@@ -15,8 +15,12 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "car-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "featuredImage", widget: image}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Engine", name: "engine", widget: "string"}
+      - {label: "Horsepower", name: "horsepower", widget: "string"}
+      - {label: "Torque", name: "torque", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog"
     label: "Blog"
@@ -42,11 +46,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Engine", name: "engine", widget: "string"}
-          - {label: "Horsepower", name: "horsepower", widget: "string"}
-          - {label: "Torque", name: "torque", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Featured Image", name: "featuredImage", widget: image}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
