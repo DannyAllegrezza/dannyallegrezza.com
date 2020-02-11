@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Masthead from '../components/Masthead';
+import { CarCardPost } from '../components/CarPostCard/CardPostCard';
 
 export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const PageContent = contentComponent || Content;
@@ -13,15 +14,7 @@ export const CarPageTemplate = ({ title, content, contentComponent, cars }) => {
   const CarsToDisplay = () => {
     return cars.map(({ node: car }) => (
       <div className="column is-4" key={car.id}>
-        <div className="post-overview">
-          <Link className="has-text-primary" to={car.fields.slug}>
-            <PreviewCompatibleImage imageInfo={car.frontmatter.featuredImage} />
-            <p className="post-overview-title">{car.frontmatter.title}</p>
-            <p className="post-overview-excerpt">
-              {car.frontmatter.description}
-            </p>
-          </Link>
-        </div>
+        <CarCardPost {...car} />
       </div>
     ))
   };
@@ -53,7 +46,7 @@ CarPageTemplate.propTypes = {
 
 const CarPage = ({ data }) => {
   const { markdownRemark: page } = data;
-  console.log(data);
+  //console.log(data);
 
   return (
     <Layout>
@@ -89,6 +82,8 @@ query CarPageQuery($id: String!) {
           title
           templateKey
           engine
+          horsepower
+          torque
           description
           date(formatString: "MMMM DD, YYYY")
           featuredImage {
