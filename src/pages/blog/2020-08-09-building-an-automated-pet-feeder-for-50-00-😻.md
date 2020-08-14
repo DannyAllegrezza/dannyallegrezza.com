@@ -11,3 +11,7 @@ tags:
   - pet-feeder
 ---
 As many of my close friends know, my wife and I have one fur-baby: Kneesox, our [Cornish Rex](https://en.wikipedia.org/wiki/Cornish_Rex) cat. She's kind of a big deal around our house and brings us both an incredible amount of joy. It's pretty safe to say that we're both pretty obsessed with her (see: the metal art I created for my wife of her or the catio I built).
+
+
+[![](http://img.youtube.com/vi/-avYaK3i6Nw/0.jpg)](http://www.youtube.com/watch?v=-avYaK3i6Nw "")
+
