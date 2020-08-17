@@ -12,12 +12,8 @@ tags:
 ---
 My wife and I have one fur-baby: Kneesox, our [Cornish Rex](https://en.wikipedia.org/wiki/Cornish_Rex) cat. She's ~~kind of~~ a big deal and brings us both an incredible amount of joy. It's pretty safe to say that we're both pretty obsessed with her (see: the metal art I created for my wife of her or the catio I built).
 
+![](/img/kneesox-metal-art.png)
 
-
-![Catio](/img/screen-shot-2020-08-16-at-5.47.41-pm.png "Catio")
-
-![](/img/screen-shot-2020-08-16-at-4.19.30-pm.png)
-
-![](/img/fullsizeoutput_29aa.jpeg)
+![](/img/catio.jpg)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-avYaK3i6Nw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
