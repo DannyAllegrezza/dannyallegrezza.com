@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Building an automated pet feeder for $50.00
 date: 2020-08-09T20:28:55.337Z
-featuredImage: /img/dsc_0389-2-.jpg
+featuredImage: /img/petfeeder-back.jpg
 description: As a fun way to break into IoT, I decided to automate a simple task
   - feeding our cat!
 tags:
@@ -11,6 +11,8 @@ tags:
   - pet-feeder
 ---
 # Overview
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/-avYaK3i6Nw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 My wife and I have one animal, Kneesox, our [Cornish Rex](https://en.wikipedia.org/wiki/Cornish_Rex) cat. She's ~~kind of~~ a big deal and brings us both an incredible amount of joy. Like any other cat, Kneesox loves to eat and if given the opportunity, would glady overindulge herself. Some cats are fine with free-feeding (having a constant supply of food available), however, she started to gain weight and we had to re-evaluate our options. 
 
@@ -61,7 +63,7 @@ Here is an overview of the hardware used in this project:
 
 >NOTE: A cheaper stepper motor could be used and the 12V to 2V adapter can be substituted out if powered by regular batteries.
 
-
+![Feeder overview](/img/petfeeder-back.jpg)
 
 ## Assembly
 The first step is to modify the cereal dispenser. We'll need to remove the crank-arm that comes attached to the inner turn-wheel. I was able to carefully wiggle mine off. Next, I modified I piece of iron rod by grinding it down to fit the key-hole for the spigot that is attached to the crank-arm. I joined the stepper motor together using this [coupler](https://www.amazon.com/gp/product/B01ES99586/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&amp;psc=1).
@@ -71,11 +73,14 @@ The first step is to modify the cereal dispenser. We'll need to remove the crank
 
 The internal turn-wheel needs to be turned somehow, which is where our stepper motor comes into the picture.
 
-![Feeder overview](/img/petfeeder-back.jpg)
-
 The stepper motor comes with 4 wire leads that get attached to the driver controller (seen above). Next, we need to power the stepper motor driver. Four pins from the ESP8266 GPIO run to the driver. At this point, I had a basic proof of concept for turning the cereal dispenser! 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-avYaK3i6Nw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![Feeder overview](/img/feeder-sideview.jpg)
+
+## Let's write some code!
+
+The ESP-8266 is a great microcontroller. For $5, you get a WiFi enabled controller with plenty of GPIO. Check out my [first blog post on the ESP-8266!](/blog/2020-01-14-iot-projects-the-esp8266/) The first thing we'll need to do is setup our Sketch file and import the proper libraries necessary to turn the stepper motor and communicate with AWS.
+
 
 <!-- ![Kneesox metal art](/img/kneesox-metal-art.png)
 > I created this piece of metal art as a gift for my wife. I don't know if I'll be able to outdo this one!
