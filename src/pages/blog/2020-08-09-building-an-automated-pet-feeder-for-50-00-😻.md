@@ -24,6 +24,7 @@ With our new roles in place, I quickly realized how unreliable I was at this sim
 
 Being quite the cat-enthusiast, my wife had already performed quite a bit of research on this topic. Commercial feeders range anywhere from $75.00 to $300.00 for a quality feeder. The feature set offered seemed fairly basic, so I set out to see if anyone had tackled this project. Of course, dozens of hackers and makers had shared their work on both YouTube and GitHub which gave me some incredible inspiration.
 
+
 # The hardware
 Here is an overview of the hardware used in this project:
 
@@ -88,10 +89,19 @@ The ESP-8266 is a great micro-controller. For $5, you get a WiFi enabled control
 My sketch file can be [located in my GitHub repo](https://github.com/DannyAllegrezza/meow-mix/tree/master/src/CatFeeder)! I'll be writing a follow up post that dives deeper into the ~150 lines of code that are used to power this project.
 
 ## AWS 
-I'm using `AWS Lambda`, `CloudWatch`, and `IoT` services to power this project. 
+For anyone looking to build their own feeder, I want to be sure I mention that the AWS (or any cloud provider) is definitely an optional step. If you'd like to avoid this complexity, you could instead just have your ESP-8266 run in a loop and call your own `Feed()` function at whatever interval is most desirable. There were a couple of different reasons why I ended up choosing AWS for this project:
+
+1. Built in security, logging, monitoring, etc.
+2. Alexa integration
+  > Alexa, feed Kneesox!
+3. A fast way to iterate on changes to my device.
+
+This project uses AWS `Lambda`, `CloudWatch`, and `IoT` services. 
 
 ![Feeder animation](/img/petfeeder.gif)
+> Two cloudwatch events are scheduled to execute twice a day. Each event calls a Lamda function, which contains about 20 lines of Javascript code used to dispatch a message to the ESP-8266
 
+In my next post I'll be discussing how each service is configured! 
 <!-- ![Kneesox metal art](/img/kneesox-metal-art.png)
 > I created this piece of metal art as a gift for my wife. I don't know if I'll be able to outdo this one!
 
