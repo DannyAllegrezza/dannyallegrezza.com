@@ -51,7 +51,7 @@ Here is an overview of the hardware used in this project:
 <td align="center">$8.00</td>
 </tr>
 <tr>
-<td><a href="https://www.amazon.com/Version-Internet-Development-Wireless-Micropython/dp/B07R4MVSCY/ref=sr_1_14?dchild=1&amp;keywords=esp8266&amp;qid=1597374211&amp;sr=8-14">ESP8266 microcontroller</a></td>
+<td><a href="https://www.amazon.com/Version-Internet-Development-Wireless-Micropython/dp/B07R4MVSCY/ref=sr_1_14?dchild=1&amp;keywords=esp8266&amp;qid=1597374211&amp;sr=8-14">ESP8266 micro-controller</a></td>
 <td align="center">$6.00</td>
 </tr>
 <tr>
@@ -71,16 +71,26 @@ The first step is to modify the cereal dispenser. We'll need to remove the crank
 ![Feeder overview](/img/feeder-1.jpg)
 > Left: The original dispenser. Right: The modified feeder
 
-The internal turn-wheel needs to be turned somehow, which is where our stepper motor comes into the picture.
+The internal turn-wheel needs to be rotated somehow, which is where our stepper motor comes into the picture.
+
+```
+[Stepper Motor]===[metal shaft]===[coupler]===[turn-wheel]
+```
 
 The stepper motor comes with 4 wire leads that get attached to the driver controller (seen above). Next, we need to power the stepper motor driver. Four pins from the ESP8266 GPIO run to the driver. At this point, I had a basic proof of concept for turning the cereal dispenser! 
 
 ![Feeder overview](/img/feeder-sideview.jpg)
 
-## Let's write some code!
+# The software
 
-The ESP-8266 is a great microcontroller. For $5, you get a WiFi enabled controller with plenty of GPIO. Check out my [first blog post on the ESP-8266!](/blog/2020-01-14-iot-projects-the-esp8266/) The first thing we'll need to do is setup our Sketch file and import the proper libraries necessary to turn the stepper motor and communicate with AWS.
+The ESP-8266 is a great micro-controller. For $5, you get a WiFi enabled controller with plenty of GPIO. Check out my [first blog post on the ESP-8266!](/blog/2020-01-14-iot-projects-the-esp8266/) The first thing we'll need to do is setup our Sketch file and import the proper libraries necessary to turn the stepper motor and communicate with AWS.
 
+My sketch file can be [located in my GitHub repo](https://github.com/DannyAllegrezza/meow-mix/tree/master/src/CatFeeder)! I'll be writing a follow up post that dives deeper into the ~150 lines of code that are used to power this project.
+
+## AWS 
+I'm using `AWS Lambda`, `CloudWatch`, and `IoT` services to power this project. 
+
+![Feeder animation](/img/petfeeder.gif)
 
 <!-- ![Kneesox metal art](/img/kneesox-metal-art.png)
 > I created this piece of metal art as a gift for my wife. I don't know if I'll be able to outdo this one!
