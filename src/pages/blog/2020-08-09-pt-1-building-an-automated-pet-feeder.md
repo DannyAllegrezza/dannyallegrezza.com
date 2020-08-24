@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Building an automated pet feeder for $50.00
+title: Part 1 - Building an automated pet feeder for $50.00
 date: 2020-08-09T20:28:55.337Z
 featuredImage: /img/petfeeder-back.jpg
 description: As a fun way to break into IoT, I decided to automate a simple task
