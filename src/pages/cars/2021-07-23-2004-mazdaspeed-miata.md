@@ -10,5 +10,9 @@ torque: 167
 ---
 
 
-# Starting point
+# 🏁 Starting point (07/23/2021)
 
+* Miata purchased!
+* Evaluate condition of car
+
+![Mazdaspeed Miata and Lotus Elise](/img/miata/miata-elise.webp)
