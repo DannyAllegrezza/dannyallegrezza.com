@@ -8,4 +8,11 @@ engine: BP-4W Turbocharged
 horsepower: 180
 torque: 167
 ---
-New project car!?
+
+
+# 🏁 Starting point (07/23/2021)
+
+* Miata purchased!
+* Evaluate condition of car
+
+![Mazdaspeed Miata and Lotus Elise](/img/miata/miata-elise.webp)
