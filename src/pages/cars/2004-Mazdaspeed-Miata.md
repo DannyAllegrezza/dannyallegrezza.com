@@ -1,12 +1,18 @@
 ---
 templateKey: car-post
 title: 2004 Mazdaspeed Miata
-engine: BP-4W
-date: 2021-07-20T20:28:55.337Z
-description: The elusive factory turbo Miata!
-featuredImage: /img/miata.jpg
-horsepower: 178
+featuredImage: /img/image0.jpg
+date: 2021-07-23T03:53:59.453Z
+description: New project car!?
+engine: BP-4W Turbocharged
+horsepower: 180
 torque: 167
 ---
-More details to come soon!
 
+
+# 🏁 Starting point (07/23/2021)
+
+* Miata purchased!
+* Evaluate condition of car
+
+![Mazdaspeed Miata and Lotus Elise](/img/miata/miata-elise.webp)
