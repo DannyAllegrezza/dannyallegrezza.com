@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Quick Tip - Tailwind CSS Templates
 date: 2022-12-05T20:28:55.337Z
 featuredImage: /img/tailwind-bg.jpg
+description: A quick tip on how to boost your prototyping productivity while using Tailwind CSS!
 tags:
   - quicktips
   - tailwind
